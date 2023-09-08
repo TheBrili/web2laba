@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Calc</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+  <link href="./style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+  <div class="container_form">
+    <!-- Вид вклада -->
+      <form>
+        <div class="container_select">
+          <select id="typeOfContribution" onchange="changeTypeOfContribution()">
+            <option selected disabled hidden>Вид вклада</option>
+            <option>Пополняемый</option>
+            <option>Срочный</option>
+          </select>
+          <!-- срок вклада -->
+            <select id="depositTerm">
+              <option selected disabled hidden>Срок вклада</option>
+            </select>
+        </div>
+        <p class="amount"><br>
+          <input id="sumAmount" type="number" size="27" placeholder="Сумма, руб.">
+        </p>
+      </form>
+      <button class="button_calculate" onclick="creatingDeposit()">Рассчитать</button>
+  </div>
+  <div id="result" class="container_result"></div>
+  <script src="./index.js"></script>
+</body>
